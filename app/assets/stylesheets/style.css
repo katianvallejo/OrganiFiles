@@ -1,0 +1,18 @@
+.form-devise{
+	border: none;
+	border-bottom: 1px solid;
+	display: block;
+	font-size: 1.2em;
+	outline: none;
+	padding: 10px 0px;
+	width: 100%;
+}
+
+.field{
+	margin-top: 1.2em;
+}
+
+.katian{
+	background: url(../assets/hola.jpeg) no-repeat center center;
+  background-size: cover;
+}
