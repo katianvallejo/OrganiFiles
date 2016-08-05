@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804232813) do
+ActiveRecord::Schema.define(version: 20160804234810) do
 
   create_table "employees", force: :cascade do |t|
-    t.integer  "no_identificacion"
+    t.string   "no_identificacion"
     t.string   "primer_nombre"
     t.string   "segundo_nombre"
     t.string   "primer_apellido"

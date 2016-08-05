@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :no_identificacion %><br>
-    <%= f.number_field :no_identificacion %>
+    <%= f.text_field :no_identificacion %>
   </div>
   <div class="field">
     <%= f.label :primer_nombre %><br>
@@ -48,10 +48,6 @@
     <%= f.date_select :fecha_ingreso %>
   </div>
   <div class="field">
-    <%= f.label :fecha_salida %><br>
-    <%= f.date_select :fecha_salida %>
-  </div>
-  <div class="field">
     <%= f.label :salario %><br>
     <%= f.text_field :salario %>
   </div>
@@ -59,3 +55,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+
