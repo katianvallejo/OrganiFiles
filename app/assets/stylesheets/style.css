@@ -16,3 +16,7 @@
 	background: url(../assets/hola.jpeg) no-repeat center center;
   background-size: cover;
 }
+
+.white{
+	color: white;
+}

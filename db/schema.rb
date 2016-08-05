@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804234810) do
+ActiveRecord::Schema.define(version: 20160805042036) do
 
   create_table "employees", force: :cascade do |t|
     t.string   "no_identificacion"
@@ -27,7 +27,10 @@ ActiveRecord::Schema.define(version: 20160804234810) do
     t.float    "salario"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "user_id"
   end
+
+  add_index "employees", ["user_id"], name: "index_employees_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
