@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804002533) do
+ActiveRecord::Schema.define(version: 20160807222530) do
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "tipo_id"
+    t.string   "no_id"
+    t.string   "primer_nombre"
+    t.string   "segundo_nombre"
+    t.string   "primer_apellido"
+    t.string   "segundo_apellido"
+    t.string   "direccion"
+    t.string   "telefono"
+    t.string   "eps"
+    t.string   "afp"
+    t.float    "salario"
+    t.date     "fecha_ingreso"
+    t.date     "fecha_retiro"
+    t.string   "estado"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "user_id"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+  end
+
+  add_index "employees", ["user_id"], name: "index_employees_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

@@ -1,0 +1,2 @@
+json.extract! employee, :id, :tipo_id, :no_id, :primer_nombre, :segundo_nombre, :primer_apellido, :segundo_apellido, :direccion, :telefono, :eps, :afp, :salario, :fecha_ingreso, :fecha_retiro, :estado, :created_at, :updated_at
+json.url employee_url(employee, format: :json)

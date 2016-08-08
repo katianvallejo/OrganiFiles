@@ -1,0 +1,72 @@
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo_id %><br>
+    <%= f.select(:tipo_id, options_for_select([['C.C.', 'C.C.'], ['T.I.', 'T.I.']])) %>
+  </div>
+  <div class="field">
+    <%= f.label :no_id %><br>
+    <%= f.text_field :no_id %>
+  </div>
+  <div class="field">
+    <%= f.label :primer_nombre %><br>
+    <%= f.text_field :primer_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :segundo_nombre %><br>
+    <%= f.text_field :segundo_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :primer_apellido %><br>
+    <%= f.text_field :primer_apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :segundo_apellido %><br>
+    <%= f.text_field :segundo_apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :eps %><br>
+    <%= f.select(:eps, options_for_select([['Cafe Salud', 'Cafe Salud'], ['Coomeva', 'Coomeva'], ['Cruz Blanca', 'Cruz Blanca'], ['Nueva EPS', 'Nueva EPS'], ['Salud Total', 'Salud Total'], ['Savia Salud', 'Savia Salud'], ['Sura', 'Sura']])) %>
+  </div>
+  <div class="field">
+    <%= f.label :afp %><br>
+    <%= f.select(:afp, options_for_select([['Colfondos', 'Colfondos'], ['Colpensiones', 'Colpensiones'], ['Porvenir', 'Porvenir'], ['Protección', 'Proteccion']])) %>
+  </div>
+  <div class="field">
+    <%= f.label :salario %><br>
+    <%= f.text_field :salario %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_ingreso %><br>
+    <%= f.date_select :fecha_ingreso %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.select(:estado, options_for_select([['Activo', 'Activo'], ['Inactivo', 'Inactivo']])) %>
+  </div>
+  <div class="field">
+    Foto: <%= f.file_field :cover  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

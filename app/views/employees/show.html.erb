@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+  <%= image_tag @employee.cover.url(:medium) %>
+</div>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @employee.tipo_id %>
+</p>
+
+<p>
+  <strong>No:</strong>
+  <%= @employee.no_id %>
+</p>
+
+<p>
+  <strong>Primer nombre:</strong>
+  <%= @employee.primer_nombre %>
+</p>
+
+<p>
+  <strong>Segundo nombre:</strong>
+  <%= @employee.segundo_nombre %>
+</p>
+
+<p>
+  <strong>Primer apellido:</strong>
+  <%= @employee.primer_apellido %>
+</p>
+
+<p>
+  <strong>Segundo apellido:</strong>
+  <%= @employee.segundo_apellido %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @employee.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @employee.telefono %>
+</p>
+
+<p>
+  <strong>Eps:</strong>
+  <%= @employee.eps %>
+</p>
+
+<p>
+  <strong>Afp:</strong>
+  <%= @employee.afp %>
+</p>
+
+<p>
+  <strong>Salario:</strong>
+  <%= @employee.salario %>
+</p>
+
+<p>
+  <strong>Fecha ingreso:</strong>
+  <%= @employee.fecha_ingreso %>
+</p>
+
+<p>
+  <strong>Fecha retiro:</strong>
+  <%= @employee.fecha_retiro %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @employee.estado %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>

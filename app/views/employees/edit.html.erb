@@ -1,0 +1,10 @@
+<h1>Editing Employee</h1>
+
+<%= render 'form' %>
+<div class="field">
+	<%= f.label :fecha_retiro %><br>
+	<%= f.date_select :fecha_retiro %>
+</div>
+
+<%= link_to 'Show', @employee %> |
+<%= link_to 'Back', employees_path %>

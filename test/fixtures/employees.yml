@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo_id: MyString
+  no_id: MyString
+  primer_nombre: MyString
+  segundo_nombre: MyString
+  primer_apellido: MyString
+  segundo_apellido: MyString
+  direccion: MyString
+  telefono: MyString
+  eps: MyString
+  afp: MyString
+  salario: 1.5
+  fecha_ingreso: 2016-08-07
+  fecha_retiro: 2016-08-07
+  estado: MyString
+
+two:
+  tipo_id: MyString
+  no_id: MyString
+  primer_nombre: MyString
+  segundo_nombre: MyString
+  primer_apellido: MyString
+  segundo_apellido: MyString
+  direccion: MyString
+  telefono: MyString
+  eps: MyString
+  afp: MyString
+  salario: 1.5
+  fecha_ingreso: 2016-08-07
+  fecha_retiro: 2016-08-07
+  estado: MyString
