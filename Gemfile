@@ -15,6 +15,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'roo'
 gem "iconv", "~> 1.0.3"
+gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug'
