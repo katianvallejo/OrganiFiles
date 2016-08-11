@@ -5,7 +5,7 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-      @employees = current_user.employees.paginate(:page => params[:page], :per_page => 3)
+      @employees = current_user.employees.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /employees/1
@@ -60,6 +60,11 @@ class EmployeesController < ApplicationController
       format.html { redirect_to employees_url, notice: 'Employee was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def import
+      current_user.employees.import(params[:file])
+      redirect_to employees_path, notice: "Employees imported."
   end
 
   private

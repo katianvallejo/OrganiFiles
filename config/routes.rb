@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :employees
-
   devise_for :users
 
-  root 'welcome#landing'
+  resources :employees do
+    collection { post :import }
+  end
+
+  root to: 'welcome#landing'
 
 end
