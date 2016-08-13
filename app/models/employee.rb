@@ -12,4 +12,9 @@ class Employee < ActiveRecord::Base
 	has_attached_file :cover, styles: { medium: "300x300", thumb: "800x600" }
 	validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
 
+    def self.import(file)
+        CSV.foreach(file.path, headers: true) do |row|
+        Employee.create! row.to_hash
+        end
+    end
 end

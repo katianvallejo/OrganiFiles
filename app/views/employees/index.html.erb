@@ -55,3 +55,10 @@
 
 <%= link_to 'New Employee', new_employee_path %>
 <%= will_paginate @employees %>
+
+ <h2>Import Employees</h2>
+
+ <%= form_tag import_employees_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+ <% end %>_
