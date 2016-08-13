@@ -1,22 +1,17 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Employees</h1>
+<div class="container">
+  <div class="jumbotron text-center katian">
+    <h1>Listing Employees</h1>
+  </div>
 <div class="media">
   <div class="media-body">
-    <table class="table table-hover">
+    <table class="table table-striped">
       <thead>
         <tr>
           <th>Tipo identificación</th>
           <th># identificación</th>
-          <th>Primer nombre</th>
-          <th>Segundo nombre</th>
+          <th>Primer nombre</th>         
           <th>Primer apellido</th>
-          <th>Segundo apellido</th>
-          <th>Dirección</th>
-          <th>Teléfono</th>
-          <th>EPS</th>
-          <th>AFP</th>
-          <th>Salario</th>
           <th>Fecha ingreso</th>
           <th>Fecha retiro</th>
           <th>Estado</th>
@@ -30,20 +25,15 @@
             <td><%= employee.tipo_id %></td>
             <td><%= employee.no_id %></td>
             <td><%= employee.primer_nombre %></td>
-            <td><%= employee.segundo_nombre %></td>
             <td><%= employee.primer_apellido %></td>
-            <td><%= employee.segundo_apellido %></td>
-            <td><%= employee.direccion %></td>
-            <td><%= employee.telefono %></td>
-            <td><%= employee.eps %></td>
-            <td><%= employee.afp %></td>
-            <td><%= employee.salario %></td>
             <td><%= employee.fecha_ingreso %></td>
             <td><%= employee.fecha_retiro %></td>
             <td><%= employee.estado %></td>
-            <td><%= link_to 'Show', employee, class: "btn btn-mini" %></td>
-            <td><%= link_to 'Edit', edit_employee_path(employee), class: "btn btn-mini" %></td>
-            <td><%= link_to 'Destroy', employee, method: :delete, class: "btn btn-mini", data: { confirm: 'Are you sure?' } %></td>
+            <div class="btn-group">
+              <td><%= link_to 'Show', employee, class: "btn  btn-show" %></td>
+              <td><%= link_to 'Edit', edit_employee_path(employee), class: "btn btn-edit" %></td>
+              <td><%= link_to 'Destroy', employee, method: :delete, class: "btn btn-destroy", data: { confirm: 'Are you sure?' } %></td>
+            </div>
           </tr>
         <% end %>
       </tbody>
@@ -53,11 +43,19 @@
 
 <br>
 
-<%= link_to 'New Employee', new_employee_path %>
+<div class="container">
+  <div class="row"></div>
+    <div class="col-md-6 col-md-offset-3">
+    <%= link_to 'New Employee', new_employee_path, class: "btn btn-success btn-lg" %>
+    <h2>Import Employees</h2>
 
-<h2>Import Employees</h2>
+      <%= form_tag import_employees_path, multipart: true do %> 
+      <%= file_field_tag :file %>  
+      <%= submit_tag "Import", class: "btn btn-default" %>
+      <% end %>
+  </div>
+</div>
 
-<%= form_tag import_employees_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
+<br>
+<br>
+<br>

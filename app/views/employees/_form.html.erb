@@ -17,31 +17,31 @@
   </div>
   <div class="field">
     <%= f.label :no_id %><br>
-    <%= f.text_field :no_id %>
+    <%= f.text_field :no_id, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :primer_nombre %><br>
-    <%= f.text_field :primer_nombre %>
+    <%= f.text_field :primer_nombre, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :segundo_nombre %><br>
-    <%= f.text_field :segundo_nombre %>
+    <%= f.text_field :segundo_nombre, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :primer_apellido %><br>
-    <%= f.text_field :primer_apellido %>
+    <%= f.text_field :primer_apellido, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :segundo_apellido %><br>
-    <%= f.text_field :segundo_apellido %>
+    <%= f.text_field :segundo_apellido, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :direccion %><br>
-    <%= f.text_field :direccion %>
+    <%= f.text_field :direccion, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
+    <%= f.text_field :telefono, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :eps %><br>
@@ -53,20 +53,25 @@
   </div>
   <div class="field">
     <%= f.label :salario %><br>
-    <%= f.text_field :salario %>
+    <%= f.text_field :salario, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :fecha_ingreso %><br>
-    <%= f.date_select :fecha_ingreso %>
+    <%= f.date_select :fecha_ingreso, class: "form-control" %>
   </div>
+  <div class="field">
+    <%= f.label :fecha_retiro %><br>
+    <%= f.date_select :fecha_retiro, { include_blank: true } %>
+</div>
   <div class="field">
     <%= f.label :estado %><br>
     <%= f.select(:estado, options_for_select([['Activo', 'Activo'], ['Inactivo', 'Inactivo']])) %>
   </div>
   <div class="field">
-    Foto: <%= f.file_field :cover  %>
+    Foto: <%= f.file_field :cover %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+   
