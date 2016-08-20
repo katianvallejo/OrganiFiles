@@ -4,84 +4,92 @@
 
       <p id="notice"><%= notice %></p>
 
-        <%= image_tag @employee.cover.url(:medium) %>
+        <%= image_tag @employee.cover.url(:medium), class:"double-border" %>
 
       <br>
       <br>
-    <dl class="dl-horizontal">
-      <p>
-        <dt>  <strong>Tipo:</strong> </dt>
-        <dd>  <%= @employee.tipo_id %> </dd>
-      </p>
 
-      <p>
-        <dt><strong>No:</strong></dt>
-        <dd><%= @employee.no_id %></dd>
-      </p>
+        <div class="media">
+          <div class="media-body">
+            <table class="table table-striped">
 
-      <p>
-        <dt><strong>Primer nombre:</strong></dt>
-        <dd><%= @employee.primer_nombre %></dd>
-      </p>
+              <tr>
+                <td> <strong>Tipo:</strong> </td>
+                <td>  <%= @employee.tipo_id %> </td>
+              </tr>
+              
+              <tr>
+                <td> <strong>No:</strong> </td>
+                <td> <%= @employee.no_id %> </td>
+              </tr> 
 
-      <p>
-        <dt><strong>Segundo nombre:</strong></dt>
-        <dd><%= @employee.segundo_nombre %></dd>
-      </p>
+              <tr>
+                <td> <strong>Primer nombre:</strong> </td>
+                <td> <%= @employee.primer_nombre %> </td>
+              </tr>
 
-      <p>
-        <dt><strong>Primer apellido:</strong></dt>
-        <dd><%= @employee.primer_apellido %></dd>
-      </p>
+              <tr>
+                <td> <strong>Segundo nombre:</strong> </td>
+                <td> <%= @employee.segundo_nombre %> </td>
+              </tr>
 
-      <p>
-        <dt><strong>Segundo apellido:</strong></dt>
-        <dd><%= @employee.segundo_apellido %></dd>
-      </p>
+              <tr>
+                <td> <strong>Primer apellido:</strong> </td>
+                <td> <%= @employee.primer_apellido %> </td>
+              </tr>
+                
+              <tr>
+                <td> <strong>Segundo apellido:</strong> </td>
+                <td><%= @employee.segundo_apellido %></td>
+              </tr> 
 
-      <p>
-        <dt><strong>Direccion:</strong></dt>
-        <dd><%= @employee.direccion %></dd>
-      </p>
+              <tr>
+                <td> <strong>Direccion:</strong> </td>
+                <td><%= @employee.direccion %></td>
+              </tr> 
+                
+              <tr>
+                <td> <strong>Telefono:</strong> </td>
+                <td><%= @employee.telefono %></td>
+              </tr>
 
-      <p>
-        <dt><strong>Telefono:</strong></dt>
-        <dd><%= @employee.telefono %></dd>
-      </p>
+              <tr>
+                <td> <strong>Eps:</strong> </td>
+                <td><%= @employee.eps %></td>
+              </tr>  
+                
+              <tr>
+                <td> <strong>Afp:</strong> </td>
+                <td><%= @employee.afp %></td>
+              </tr>
 
-      <p>
-        <dt><strong>Eps:</strong></dt>
-        <dd><%= @employee.eps %></dd>
-      </p>
+              <tr>
+                <td> <strong>Salario:</strong> </td>
+                <td><%= @employee.salario %></td>
+              </tr>
 
-      <p>
-        <dt><strong>Afp:</strong></dt>
-        <dd><%= @employee.afp %></dd>
-      </p>
+              <tr>
+                <td> <strong>Fecha ingreso:</strong> </td>
+                <td><%= @employee.fecha_ingreso %></td>
+              </tr>
 
-      <p>
-        <dt><strong>Salario:</strong></dt>
-        <dd><%= @employee.salario %></dd>
-      </p>
-
-      <p>
-        <dt><strong>Fecha ingreso:</strong></dt>
-        <dd><%= @employee.fecha_ingreso %></dd>
-      </p>
-
-      <p>
-        <dt><strong>Fecha retiro:</strong></dt>
-        <dd><%= @employee.fecha_retiro %></dd>
-      </p>
-
-      <p>
-        <dt><strong>Estado:</strong></dt>
-        <dd><%= @employee.estado %></dd>
-      </p>
-
-      <dt><%= link_to 'Edit', edit_employee_path(@employee), class: "btn btn-primary" %> </dt>
-      <dd><%= link_to 'Back', employees_path, class: "btn btn-success" %></dd>
-    </dl>  
+              <tr>
+                <td> <strong>Fecha retiro:</strong> </td>
+                <td><%= @employee.fecha_retiro %></td>
+              </tr> 
+                
+              <tr>
+                <td> <strong>Estado:</strong> </td>
+                <td><%= @employee.estado %></td>
+              </tr>  
+            </table>
+          </div>
+        </div>         
+            
+            <dl class="dl-horizontal boton">
+          <dt><%= link_to 'Edit', edit_employee_path(@employee), class: "btn btn-primary" %> </dt>
+          <dd><%= link_to 'Back', employees_path, class: "btn btn-success" %></dd>
+        </dl>
     </div>
   </div>
 </div>

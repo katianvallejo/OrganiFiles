@@ -43,3 +43,17 @@ a, a:visited {
 	background-size: cover;
  	color: white
 }
+img.double-border {
+border: 5px solid black;
+padding: 5px; 
+background: white;
+margin-left: 8em;
+border-radius: 500px;
+}
+
+.boton {
+	margin-left: 8em;
+}
+ .jose {
+ 	margin-left: 8em;
+ }
